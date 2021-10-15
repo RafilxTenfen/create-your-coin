@@ -94,4 +94,10 @@ __Resultado esperado__
 - Você pode acessar e verificar seu contrato no ropsten explorer https://ropsten.etherscan.io/address/0x15798879739613A0eF95bb8831F155a32d1437D7
 > Substitua o endereço pelo seu endereço do contrato
 
-
+- Copie o endereço do seu contrato e adicione o seu token para a extensão metamask
+- Abra a extensão do metamask e clique em Import Token
+![](https://i.imgur.com/0C2MdMT.png)
+- Cole o endereço do seu token em Token Contract Address clique em Add Custom Token
+![](https://i.imgur.com/cFg0h85.png)
+- Em seguida clique em importar tokens
+- Se tudo occureu bem, o metamask deve completar os demais campos
