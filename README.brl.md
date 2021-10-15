@@ -61,7 +61,7 @@ $~ cp .env.example .env
 ![](https://i.imgur.com/mCZCCFu.png)
 - Clique em Account Details
 - Clique em Export Private Key
-![](https://i.imgur.com/kyA0kEA.png)
+![](https://i.imgur.com/Zq4VgOC.png)
 - Informe sua senha
 - Copie sua chave privada
 - Substitua a chave privada no arquivo `.env` na chave `PRIVATE_KEY`
