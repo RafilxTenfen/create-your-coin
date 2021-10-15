@@ -2,7 +2,7 @@
 
 - This is a basic project to explain how to deploy and transfer your own coin
 
-### BRL
+### [BRL](https://github.com/RafilxTenfen/create-your-coin/blob/main/README.brl.md)
 - For portugues, take a look at the file `README.brl.md` instructions
 
 ### Instructions
