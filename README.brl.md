@@ -73,18 +73,25 @@ $~ cp .env.example .env
 - Nas redes de testes os fundos são chamados de faucet, no caso da rede ropsten [clique aqui](https://faucet.ropsten.be/)
 - Informe seu endereço da rede (pode ser copiado na extensão metamask)
 
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
+## Smartcontract
+- Vá até o arquivo `contracts/MyErc20Token.sol` e informe no primeiro parâmetro o nome da sua moeda, e no segundo parâmetro o simbolo da sua moeda
+- Compile o contrato com o seguinte comando
 ```shell
-hardhat run --network ropsten scripts/deploy.js
+$~ npm run compile
+```
+- Faça o deploy do contrato
+```shell
+$~ npm run deploy
 ```
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
+- Verifique o contrato
 ```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
+$~ npm run verify
 ```
+__Resultado esperado__
+![](https://i.imgur.com/VXxLOe1.png)
+
+- Você pode acessar e verificar seu contrato no ropsten explorer https://ropsten.etherscan.io/address/0x15798879739613A0eF95bb8831F155a32d1437D7
+> Substitua o endereço pelo seu endereço do contrato
+
+

@@ -3,10 +3,9 @@ import { task } from "hardhat/config";
 import { HardhatUserConfig } from 'hardhat/types';
 import 'hardhat-deploy';
 import 'hardhat-deploy-ethers';
-import "@nomiclabs/hardhat-etherscan";
-import "@nomiclabs/hardhat-waffle";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+
 // This adds support for typescript paths mappings
 import "tsconfig-paths/register";
 
@@ -36,6 +35,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+  },
+  namedAccounts: {
+    deployer: 0,
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,

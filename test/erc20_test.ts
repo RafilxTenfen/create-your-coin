@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 import { Signer } from "ethers";
-import { expect } from "chai";
+import { expect } from "./chai-setup";
 
 describe("Token", function () {
   let accounts: Signer[];
