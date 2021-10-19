@@ -8,8 +8,8 @@
 
 ## Requisitos
 - Existem alguns programas necessários
-- [Node](https://nodejs.org/en/blog/release/v16.11.1/)
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Node v16.9.1](https://nodejs.org/en/blog/release/v16.9.1/)
+- [npm v7.21.1](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [git](https://github.com/git-guides/install-git)
 - [Chrome](https://www.google.com/chrome/)
 
@@ -27,7 +27,10 @@ $~ git clone https://github.com/RafilxTenfen/create-your-coin.git
 - Para realizar todos os passos desse projeto, é necessário algumas variáveis de ambiente
 - Inicie copiando o arquivo `.env.example` para `.env`
 ```shell
+## Unix
 $~ cp .env.example .env
+## Windows
+$~ copy .env.example .env
 ```
 
 #### ETHERSCAN_API_KEY
