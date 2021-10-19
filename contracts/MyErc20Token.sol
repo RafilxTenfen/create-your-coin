@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract MyErc20Token is ERC20 {
-    constructor(uint256 initialSupply) ERC20("RafilxCoin", "RTC") {
-        _mint(msg.sender, initialSupply);
-    }
+	constructor(uint256 initialSupply) ERC20("RafilxCoin", "RTC") {
+		_mint(msg.sender, initialSupply);
+	}
 }
