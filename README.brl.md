@@ -76,6 +76,12 @@ $~ copy .env.example .env
 - Nas redes de testes os fundos são chamados de faucet, no caso da rede ropsten [clique aqui](https://faucet.ropsten.be/)
 - Informe seu endereço da rede (pode ser copiado na extensão metamask)
 
+## Instale os pacotes
+- Vamos utilizar vários pacotes, então execute o seguinte comando para instalar
+```shell
+$~ npm install
+```
+
 ## Smartcontract
 - Vá até o arquivo `contracts/MyErc20Token.sol` e informe no primeiro parâmetro o nome da sua moeda, e no segundo parâmetro o simbolo da sua moeda
 - Compile o contrato com o seguinte comando
