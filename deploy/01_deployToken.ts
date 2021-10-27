@@ -6,7 +6,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) { /
   const { deploy } = deployments; // The deployments field itself contains the deploy function.
 
   const { deployer } = await getNamedAccounts(); // Fetch the accounts. These can be configured in hardhat.config.ts as explained above.
-  const initialSupply = 500000000000000000; // value in wei
+  const initialSupply = 5000000000000; // value in wei
 
   await deploy('MyErc20Token', { // This will create a deployment called 'Token'. By default it will look for an artifact with the same name. The 'contract' option allows you to use a different artifact.
     from: deployer, // Deployer will be performing the deployment transaction.
