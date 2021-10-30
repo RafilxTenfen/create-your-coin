@@ -9,11 +9,19 @@
 ## Requisitos
 - Existem alguns programas necessários
 - [Node v16.9.1](https://nodejs.org/en/blog/release/v16.9.1/)
+  - Se você utiliza linux, pode utilizar a seguinte linha de comando para instalar o node
+  ```shell
+  $~ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  $~ sudo apt install nodejs
+  ```
 - [npm v7.21.1](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [git](https://github.com/git-guides/install-git)
 - [Chrome](https://www.google.com/chrome/)
+> Para verificar as versões instaladas, utilize `node -v ; npm -v`
+
 
 ## Metamask
+- Entre em algum browser compatível com as extensões do chrome (Chrome, Brave)
 - Instale [metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
 - Crie sua carteira
 
@@ -21,6 +29,10 @@
 - Realize o git clone
 ```shell
 $~ git clone https://github.com/RafilxTenfen/create-your-coin.git
+```
+- Entre no diretório
+```shell
+$~ cd create-your-coin/
 ```
 
 ## Variáveis de ambiente
@@ -53,13 +65,14 @@ $~ copy .env.example .env
 ![](https://i.imgur.com/9Zi0bNk.png)
 - Clique em SETTINGS
 - Selecione Ropsten no campo ENDPOINTS
-- Copie a Ropsten URL
+- Copie a Ropsten URL *HTTPS*
 ![](https://i.imgur.com/8BUBnlM.png)
 - Substitua a chave no arquivo `.env` na chave `ROPSTEN_URL`
 
 #### PRIVATE_KEY
 - A variável de ambiente `PRIVATE_KEY` é a chave privada da sua carteira, que é utilizada para assinar as suas transações na blockchain
 - Vá até a extensão metamask
+> Não é necessário selecionar a Ropsten network
 - Clique nos três pontos
 ![](https://i.imgur.com/mCZCCFu.png)
 - Clique em Account Details
@@ -74,7 +87,15 @@ $~ copy .env.example .env
 - Na main chain é certamente caro realizar transações
 - Na rede de teste ropsten é possível adquirir de graça para realizar testes xD
 - Nas redes de testes os fundos são chamados de faucet, no caso da rede ropsten [clique aqui](https://faucet.ropsten.be/)
-- Informe seu endereço da rede (pode ser copiado na extensão metamask)
+- Copie seu endereço do metamask
+![](https://i.imgur.com/RSxAQDM.png)
+- Informe seu endereço da rede (pode ser copiado na extensão metamask) Cole seu endereço no campo e clique em `Send me test Ether`
+![](https://i.imgur.com/vtO9oSz.png)
+- Aguarde alguns instantes (cerca de 2 minutos)
+- Selecione a rede Ropsten na sua extensão do metamask
+![](https://i.imgur.com/a1IB1mp.png)
+- Verifique seu saldo, ele deve ser algo em torno de `0.3 Ether`, que ja será mais do que suficiente para nossos testes
+![](https://i.imgur.com/KViAZa9.png)
 
 ## Instale os pacotes
 - Vamos utilizar vários pacotes, então execute o seguinte comando para instalar
@@ -83,7 +104,10 @@ $~ npm install
 ```
 
 ## Smartcontract
-- Vá até o arquivo `contracts/MyErc20Token.sol` e informe no primeiro parâmetro o nome da sua moeda, e no segundo parâmetro o simbolo da sua moeda
+- Vá até o arquivo `contracts/MyErc20Token.sol` linha 8 e informe no primeiro parâmetro o nome da sua moeda, e no segundo parâmetro o simbolo da sua moeda
+  - Utilize no máximo 15 caracteres para o primeiro parâmetro (nome da moeda)
+  - Utilize no máximo 5 caracteres para o segundo parâmetro (símbolo da moeda)
+
 - Compile o contrato com o seguinte comando
 ```shell
 $~ npm run compile
