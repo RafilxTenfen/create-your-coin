@@ -47,7 +47,7 @@ $~ copy .env.example .env
 
 #### ETHERSCAN_API_KEY
 - Essa variável de ambiente é utilizada para verificar os contratos através dos scripts do pacote `hardhat`
-- Para adiquirir a variável de ambiente `ETHERSCAN_API_KEY`
+- Para adquirir a variável de ambiente `ETHERSCAN_API_KEY`
 - [Acesse etherscan](https://etherscan.io/login)
 - Faça o seu login e/ou cadastre-se
 - Após entrar, clique em [API-KEYs](https://etherscan.io/myapikey)
