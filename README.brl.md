@@ -79,6 +79,7 @@ $~ copy .env.example .env
 - Clique em Export Private Key
 ![](https://i.imgur.com/Zq4VgOC.png)
 - Informe sua senha
+> O metamask pode ser um pouco lento, digite devagar para garantir
 - Copie sua chave privada
 - Substitua a chave privada no arquivo `.env` na chave `PRIVATE_KEY`
 
