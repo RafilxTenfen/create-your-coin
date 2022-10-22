@@ -7,7 +7,7 @@ import Interactions from './Interactions';
 const Wallet = () => {
 
 	// deploy simple token contract and paste deployed contract address here. This value is local ganache chain
-	let contractAddress = '0x826e131adf0ffc77308540966d757b466fa72ffd';
+	let contractAddress = '0x4ec10A50801f89266F0F1FA7fd3fa320106bBF63';
 
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [defaultAccount, setDefaultAccount] = useState(null);

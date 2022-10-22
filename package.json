@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",
-    "deploy": "npx hardhat --network ropsten deploy",
-    "verify": "npx hardhat --network ropsten etherscan-verify",
-    "script-transfer": "npx hardhat run ./scripts/transfer.ts --network ropsten",
+    "deploy": "npx hardhat --network goerli deploy",
+    "verify": "npx hardhat --network goerli etherscan-verify",
+    "script-transfer": "npx hardhat run ./scripts/transfer.ts --network goerli",
     "compile": "npx hardhat compile"
   },
   "repository": {

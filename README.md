@@ -71,9 +71,9 @@ $~ copy .env.example .env
 ![addKey](https://i.imgur.com/WCXMrX0.png)
 - Copy the created key and replace it in the copied file `.env` in the key `ETHERSCAN_API_KEY`
 
-### ROPSTEN_URL
+### GOERLI_URL
 
-- This environment variable is used to connect to a node of the Ethereum test blockchain network, called [Ropsten](https://ropsten.etherscan.io/) and so be able to send transactions through these nodes
+- This environment variable is used to connect to a node of the Ethereum test blockchain network, called [Goerli](https://goerli.etherscan.io/) and so be able to send transactions through these nodes
 - Let's use [Infura](https://infura.io/)
 - Perform the [login](https://infura.io/login)
 - Click in [ETHEREUM](https://infura.io/dashboard/ethereum)
@@ -81,17 +81,17 @@ $~ copy .env.example .env
 - Click on the first project if you have it, if not click on CREATE NEW PROJECT
 ![image](https://i.imgur.com/9Zi0bNk.png)
 - Click in SETTINGS
-- Select Ropsten in the field ENDPOINTS
-- Copy the Ropsten URL *HTTPS*
+- Select Goerli in the field ENDPOINTS
+- Copy the Goerli URL *HTTPS*
 ![image](https://i.imgur.com/8BUBnlM.png)
-- Replace in file `.env` the key `ROPSTEN_URL`
+- Replace in file `.env` the key `GOERLI_URL`
 
 ### PRIVATE_KEY
 
 - The environment variable `PRIVATE_KEY` is your wallet's private key, which is used to sign your transactions on the blockchain
 - Go to the metamask extension
 
-> It is not necessary to select the Ropsten network
+> It is not necessary to select the Goerli network
 
 - Click in the ellipsis("...")
 ![image](https://i.imgur.com/mCZCCFu.png)
@@ -102,18 +102,18 @@ $~ copy .env.example .env
 - Copy your private key
 - Replace in file `.env` the key `PRIVATE_KEY`
 
-#### [Adicione ETH](https://faucet.ropsten.be/)
+#### [Adicione ETH](https://goerlifaucet.com/)
 
 - To be able to carry out transactions it is necessary to pay fees on the blockchain network
 - In the main chain it is certainly expensive to carry out transactions
-- On the ropsten test network you can purchase for free to perform xD tests
-- In test networks, the funds are called faucet, in the case of the ropsten's network [click here](https://faucet.ropsten.be/)
+- On the goerli test network you can purchase for free to perform xD tests
+- In test networks, the funds are called faucet, in the case of the goerli's network [click here](https://goerlifaucet.com/)
 - Copy your Metamask address
 ![image](https://i.imgur.com/RSxAQDM.png)
 - Enter your network address (can be copied into metamask extension) Paste your address in the field and click on `Send me test Ether`
 ![image](https://i.imgur.com/vtO9oSz.png)
 - Wait a few moments (about 2 minutes)
-- Select the Ropsten network in your metamask extension
+- Select the Goerli network in your metamask extension
 ![image](https://i.imgur.com/a1IB1mp.png)
 - Check your balance, it should be something around `0.3 Ether`, which will be more than enough for our tests.
 ![image](https://i.imgur.com/KViAZa9.png)
@@ -153,7 +153,7 @@ $~ npm run verify
 __Expected result__
 ![image](https://i.imgur.com/VXxLOe1.png)
 
-- You can access and verify your contract in [ropsten explorer](https://ropsten.etherscan.io/address/0x15798879739613A0eF95bb8831F155a32d1437D7)
+- You can access and verify your contract in [goerli explorer](https://ropsten.etherscan.io/address/0x15798879739613A0eF95bb8831F155a32d1437D7)
 
 > Replace the address with your contract address
 
