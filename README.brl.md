@@ -71,14 +71,14 @@ $~ copy .env.example .env
 - Essa variável de ambiente é utilizada para se conectar a um node da rede de blockchain de testes do ethereum, chamada de [Goerli](https://goerli.etherscan.io/) e assim poder enviar transações através desses nodes
 - Vamos utilizar [Infura](https://infura.io/)
 - Realize o [login](https://infura.io/login)
-- Clique em [ETHEREUM](https://infura.io/dashboard/ethereum)
-![infura_eth](https://i.imgur.com/KWnGPDL.png)
-- Clique no primeiro projeto se você tiver, caso não tenha clique em CREATE NEW PROJECT
-![infura_click_project](https://i.imgur.com/9Zi0bNk.png)
-- Clique em SETTINGS
-- Selecione Goerli no campo ENDPOINTS
-- Copie a Goerli URL *HTTPS*
-![infura_https](https://i.imgur.com/8BUBnlM.png)
+- Crie uma nova chave
+![image](https://user-images.githubusercontent.com/17556614/197309690-d1330ffa-64d2-42f4-8b4b-5d3fb798a61e.png)
+- Clique em "MANAGE KEY"
+![image](https://user-images.githubusercontent.com/17556614/197309721-9624934e-5f20-44bd-9b12-3ca8dac32671.png)
+- Clique em Goerli
+![image](https://user-images.githubusercontent.com/17556614/197309755-f096cb77-f9a1-47d5-925a-befe4a22f0b0.png)
+- Copie a URL
+![image](https://user-images.githubusercontent.com/17556614/197309801-896df0c2-e3de-4809-adea-2bdfb6af0f7f.png)
 - Substitua a chave no arquivo `.env` na chave `GOERLI_URL`
 
 #### PRIVATE_KEY
@@ -107,14 +107,14 @@ $~ copy .env.example .env
 - Na rede de teste goerli é possível adquirir de graça para realizar testes xD
 - Nas redes de testes os fundos são chamados de faucet, no caso da rede goerli [clique aqui](https://goerlifaucet.com/)
 - Copie seu endereço do metamask
-![copy_addr](https://i.imgur.com/RSxAQDM.png)
-- Informe seu endereço da rede (pode ser copiado na extensão metamask) Cole seu endereço no campo e clique em `Send me test Ether`
-![get eth test](https://i.imgur.com/vtO9oSz.png)
+![image](https://user-images.githubusercontent.com/17556614/197309887-2a4e3b89-aa6e-4080-8ab4-fd37268b6111.png)
+- Faça login se necessário
+- Informe seu endereço da rede (pode ser copiado na extensão metamask) Cole seu endereço no campo e clique em `Send Me ETH`
+![image](https://user-images.githubusercontent.com/17556614/197309949-3718bbd8-30ab-4a33-815b-deb322dc661c.png)
 - Aguarde alguns instantes (cerca de 2 minutos)
 - Selecione a rede Goerli na sua extensão do metamask
-![select goerli](https://i.imgur.com/a1IB1mp.png)
+![image](https://user-images.githubusercontent.com/17556614/197309985-06f6e0eb-d869-4aed-a4f9-a80c4e46625b.png)
 - Verifique seu saldo, ele deve ser algo em torno de `0.1 Ether`, que ja será mais do que suficiente para nossos testes
-![eth balance](https://i.imgur.com/KViAZa9.png)
 
 ## Instale os pacotes
 
@@ -142,16 +142,32 @@ $~ npm run compile
 $~ npm run deploy
 ```
 
+> __Resultado Esperado__
+
+```shell
+> create-your-coin@1.0.0 deploy
+> npx hardhat --network goerli deploy
+
+Nothing to compile
+deploying "MyErc20Token" (tx: 0x54a295b51ab9ed1fe408412dd5c2b16eeb054f84bd9f82586ccc3c0aa76e48d2)...: deployed at 0x7CAF951a8DD71a925c125F70183406bd1E1B5F09 with 1221304 gas
+```
+
 - Verifique o contrato
 
 ```shell
 $~ npm run verify
 ```
 
-__Resultado esperado__
-![expected result](https://i.imgur.com/VXxLOe1.png)
+```shell
+> create-your-coin@1.0.0 verify
+> npx hardhat --network goerli etherscan-verify
 
-- Você pode acessar e verificar seu contrato no [goerli explorer](https://ropsten.etherscan.io/address/0x15798879739613A0eF95bb8831F155a32d1437D7)
+verifying MyErc20Token (0x7CAF951a8DD71a925c125F70183406bd1E1B5F09) ...
+waiting for result...
+ => contract MyErc20Token is now verified
+```
+
+- Você pode acessar e verificar seu contrato no [goerli explorer](https://goerli.etherscan.io/address/0x7CAF951a8DD71a925c125F70183406bd1E1B5F09)
 
 > Substitua o endereço pelo seu endereço do contrato
 
